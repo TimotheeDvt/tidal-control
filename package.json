@@ -1,0 +1,66 @@
+{
+  "name": "tidal-control",
+  "displayName": "Tidal Control",
+  "description": "Control Tidal music playback from VS Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tidal-control.playPause",
+        "title": "Tidal: Play/Pause"
+      },
+      {
+        "command": "tidal-control.next",
+        "title": "Tidal: Next Track"
+      },
+      {
+        "command": "tidal-control.previous",
+        "title": "Tidal: Previous Track"
+      },
+      {
+        "command": "tidal-control.showNowPlaying",
+        "title": "Tidal: Show Now Playing"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "tidal-control.playPause",
+        "key": "ctrl+alt+p",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "tidal-control.next",
+        "key": "ctrl+alt+right",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "tidal-control.previous",
+        "key": "ctrl+alt+left",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "out",
+    "src"
+  ],
+  "icon": "src/icon.png",
+  "publisher": "TD-5"
+}
