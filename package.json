@@ -59,8 +59,13 @@
   },
   "files": [
     "out",
-    "src"
+    "src",
+    "LICENSE.md"
   ],
   "icon": "src/icon.png",
-  "publisher": "TD-5"
+  "publisher": "TD-5",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TimotheeDvt/tidal-control.git"
+  }
 }
