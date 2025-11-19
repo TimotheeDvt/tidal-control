@@ -2,7 +2,7 @@
   "name": "tidal-control",
   "displayName": "Tidal Control",
   "description": "Control Tidal music playback from VS Code",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -60,7 +60,8 @@
   "files": [
     "out",
     "src",
-    "LICENSE.md"
+    "LICENSE.md",
+    "readme.md"
   ],
   "icon": "src/icon.png",
   "publisher": "TD-5",
