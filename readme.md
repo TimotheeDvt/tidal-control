@@ -1,5 +1,5 @@
 # Tidal Control
-Control Tidal playback directly from the VS Code status bar with simple previous, play/pause, and next track commands.
+Control Tidal (or almost any media player) playback directly from the VS Code status bar with simple previous, play/pause, and next track commands.
 
 ## Features
 - Status bar controls for play/pause, previous, and next track

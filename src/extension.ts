@@ -121,7 +121,9 @@ Start-Sleep -Milliseconds 50
 
   async function getCurrentMediaInfo(): Promise<{ artist: string, title: string, status: string } | null> {
     try {
-      const { stdout, stderr } = await execAsync(`powershell -NoProfile -ExecutionPolicy Bypass -File "${context.extensionPath}/src/media.ps1"`);
+      const { stdout, stderr } = await execAsync(
+        `powershell -NoProfile -ExecutionPolicy Bypass -Command "[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; & '${path.join(context.extensionPath, 'src', 'media.ps1')}'"`
+      );
 
       if (stdout.trim().startsWith('ERROR:')) {
         return null;

@@ -1,3 +1,4 @@
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 try {
     Add-Type -AssemblyName System.Runtime.WindowsRuntime
     [Windows.Media.Control.GlobalSystemMediaTransportControlsSessionManager,Windows.Media.Control,ContentType=WindowsRuntime] | Out-Null
